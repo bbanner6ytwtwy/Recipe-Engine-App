@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 function MyComponent() {
-    const [error, setError]= useState(false)
     const [val,
         setVal] = useState("")
     const [data,
@@ -28,9 +27,12 @@ useEffect(()=>{
             await axios
                 .get(API_URL + "/complexSearch", options)
                 .then((result) => {
-                    setData(result.data.results) & setError(false)
+                    setData(result.data.results)
                 })
-                .catch(e => console.log(e) & setError(true))
+                .catch(e => console.log(e) & setData([{
+                    image: "Search Limit Reached For Today",
+                    title: "Come Back Tomorrow.."
+                }]))
         } catch (e) {
             console.log(e)
         }
@@ -58,7 +60,7 @@ useEffect(()=>{
           <div className="body">
           <div className="row text-center align-middle pt-5">
          
-            {error ? (data.map((e) => { 
+            {data.map((e) => { 
              return  (
              <div className = "col-lg-3 col-md-4 p-3 h-anim mb-2 fs-6 " > 
              <Link to={`/food/${e.title}`} target="_self" className="card-link text-decoration-none vp-text fs-6" >
@@ -70,7 +72,7 @@ useEffect(()=>{
             </div> </Link>
             </div>
              )
-            })) : <h1>Max Search Limit Reached, Com back Tomorrow...</h1>
+            })
           }
           </div> </div>
           </>
