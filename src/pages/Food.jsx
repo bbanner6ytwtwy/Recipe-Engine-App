@@ -26,7 +26,19 @@ export default function Food() {
                         .then((result) => {
                             setData(result.data.results) & console.log(result.data.results)
                         })
-                        .catch(e => console.log(e))
+                        .catch(e => console.log(e) & setData({
+                            title: "err",
+                            img: "err",
+                            vegan: "err",
+                            veryHealthy: "err",
+                            vegetarian: "err",
+                            veryPopular: "err",
+                            healthScore: "err",
+                            glutenFree: "err",
+                            dishTypes: "err",
+                            diets: "err",
+                            sourceUrl: "err"
+                        }))
                 } catch (e) {
                     console.log(e)
                 }
