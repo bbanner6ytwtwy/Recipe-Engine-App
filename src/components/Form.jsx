@@ -30,8 +30,8 @@ useEffect(()=>{
                     setData(result.data.results)
                 })
                 .catch(e => console.log(e) & setData([{
-                    image: "Search Limit Reached For Today",
-                    title: "Come Back Tomorrow.."
+                    title: "Search Limit Reached For Today",
+                    title1: "Come Back Tomorrow.."
                 }]))
         } catch (e) {
             console.log(e)
@@ -68,6 +68,7 @@ useEffect(()=>{
                 <img src={e.image} className="card-img-top" alt="img"/>
                 <div className="card-body px-3">
                     <p className="card-text text-center" style={{"font-family": 'Lora'}}>{e.title}</p>
+                    <p className="card-text text-center" style={{"font-family": 'Lora'}}>{e.title1}</p>
                 </div>
             </div> </Link>
             </div>
