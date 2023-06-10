@@ -32,6 +32,15 @@ useEffect(()=>{
                 .catch(e => console.log(e) & setData([{
                     map: "Search Limit Reached For Today",
                     title1: "Come Back Tomorrow.."
+                }, {
+                    map: "Search Limit Reached For Today",
+                    title1: "Come Back Tomorrow.."
+                }, {
+                    map: "Search Limit Reached For Today",
+                    title1: "Come Back Tomorrow.."
+                }, {
+                    map: "Search Limit Reached For Today",
+                    title1: "Come Back Tomorrow.."
                 }]))
         } catch (e) {
             console.log(e)
