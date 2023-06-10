@@ -30,16 +30,16 @@ useEffect(()=>{
                     setData(result.data.results)
                 })
                 .catch(e => console.log(e) & setData([{
-                    map: "Search Limit Reached For Today",
+                    title: "Search Limit Reached For Today",
                     title1: "Come Back Tomorrow.."
                 }, {
                     map: "Search Limit Reached For Today",
                     title1: "Come Back Tomorrow.."
                 }, {
-                    map: "Search Limit Reached For Today",
+                    title: "Search Limit Reached For Today",
                     title1: "Come Back Tomorrow.."
                 }, {
-                    map: "Search Limit Reached For Today",
+                    title: "Search Limit Reached For Today",
                     title1: "Come Back Tomorrow.."
                 }]))
         } catch (e) {
@@ -76,7 +76,7 @@ useEffect(()=>{
              <div className="card card-bg-orange rounded-3 pb-2">
                 <img src={e.image} className="card-img-top" alt="img"/>
                 <div className="card-body px-3">
-                    <p className="card-text text-center" style={{"font-family": 'Lora'}}>{e.map}</p>
+                    <p className="card-text text-center" style={{"font-family": 'Lora'}}>{e.title}</p>
                     <p className="card-text text-center" style={{"font-family": 'Lora'}}>{e.title1}</p>
                 </div>
             </div> </Link>
