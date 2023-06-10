@@ -107,8 +107,8 @@ nav{
   }
 
 .loader{
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   display: flex;
   flex-direction: column;
